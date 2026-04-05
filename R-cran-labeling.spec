@@ -1,14 +1,15 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	labeling
+%undefine	_debugsource_packages
 Summary:	Axis Labeling
 Name:		R-cran-%{modulename}
-Version:	0.2
-Release:	2
+Version:	0.4.3
+Release:	1
 License:	MIT
 Group:		Applications/Math
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
-# Source0-md5:	8df4dd1ddea128d7e0ac2bf266c66d59
-URL:		http://cran.fhcrc.org/web/packages/labeling/index.html
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
+# Source0-md5:	915e6c823c1d8243641ce97253389f14
+URL:		https://cran.r-project.org/web/packages/labeling/index.html
 BuildRequires:	R >= 2.8.1
 Requires(post,postun):	R >= 2.8.1
 Requires(post,postun):	perl-base
